@@ -1,0 +1,484 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap");
+body {
+  margin: 0;
+  background-color: #fbfbfb;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  text-decoration: none;
+  font-size: 35px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  color: #3f3f3f;
+}
+
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+input, textarea {
+  outline: none;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #fbfbfb;
+  margin: 0px 0px 0px 0px;
+  box-shadow: 0px 4px 14px -5px rgba(34, 60, 80, 0.34);
+  border-radius: 0 0 20px 20px;
+}
+header .navbar {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+header .navbar .logo {
+  height: 100px;
+}
+header .navbar .col-md-6 {
+  display: flex;
+  justify-content: center;
+}
+header .navbar .col-md-6 .menu {
+  display: flex;
+  align-items: center;
+}
+header .navbar .col-md-6 .menu li {
+  display: flex;
+  justify-content: center;
+  margin: 0 15px 0 15px;
+}
+header .navbar .col-md-6 .menu li a {
+  transition: 0.3s;
+  font-size: 15px;
+  font-family: "Ralyway", sans-serif;
+  color: #202020;
+}
+header .navbar .col-md-6 .menu li a:hover {
+  color: #9345ee;
+}
+header .navbar .col-md-6 .menu li a:active {
+  color: #9345ee;
+}
+header .navbar #login_bacet {
+  display: flex;
+  justify-content: flex-end;
+}
+header .navbar #login_bacet .bacet {
+  transition: 0.3s;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  height: 35px;
+  width: 60px;
+  background-color: rgba(148, 69, 238, 0.979);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 15.5px;
+  font-family: "Ralyway", sans-serif;
+  color: #f3f3f3;
+}
+header .navbar #login_bacet .bacet img {
+  height: 20px;
+  width: 20px;
+}
+header .navbar #login_bacet .bacet .line {
+  border-left: 1.5px solid #f3f3f3;
+  height: 20px;
+}
+header .navbar #login_bacet .bacet p {
+  margin-bottom: 0;
+  padding-right: 3.5px;
+}
+header .navbar #login_bacet .bacet:hover {
+  background-color: #7148FF;
+}
+header .navbar #login_bacet .bacet:active {
+  background-color: #7148FF;
+}
+header .navbar #burger_menu_col {
+  display: none;
+}
+header .col-md-12.burger_body {
+  display: none;
+}
+
+.section {
+  margin: 30px 0px 0px 0px;
+}
+.section #carusel_container {
+  border-radius: 15px;
+}
+.section #carusel_container #carouselExampleInterval {
+  background-color: none;
+}
+.section #carusel_container #carouselExampleInterval .carousel-inner {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+}
+.section #cardAreaSmall {
+  display: flex;
+  justify-content: left;
+}
+@media screen and (max-width: 580px) {
+  .section #cardAreaSmall {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.section #cardAreaSmall .col-md-12 {
+  display: flex;
+  justify-content: left;
+  padding: 0;
+}
+.section #cardAreaSmall .col-md-12 h1 {
+  padding: 30px 0 30px 0;
+}
+.section #cardAreaSmall .col-md-3.col-sm-6 {
+  display: flex;
+  justify-content: center;
+}
+.section #cardAreaSmall .col-md-3.col-sm-6 .cardS {
+  display: flex;
+  transition: 0.5s;
+  align-items: center;
+  justify-content: center;
+  margin: 55px 0 0 0;
+  height: 120px;
+  width: 255px;
+  cursor: pointer;
+  background: #FFFFFF;
+  box-shadow: 0 12px 10px #dbdbdb6b, 0 10px 10px #dbdbdb6b;
+  border-radius: 10px;
+}
+.section #cardAreaSmall .col-md-3.col-sm-6 .cardS img {
+  width: 80px;
+}
+.section #cardAreaSmall .col-md-3.col-sm-6 .cardS h3 {
+  font-size: 13px;
+  font-family: "Ralyway", sans-serif;
+  font-weight: 400;
+  color: #202020;
+}
+.section #cardAreaSmall .col-md-3.col-sm-6 .cardS a {
+  font-size: 12px;
+  font-family: "Ralyway", sans-serif;
+  color: #686868;
+}
+.section #cardAreaSmall .col-md-3.col-sm-6 .cardS .text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 30px;
+}
+.section #cardAreaSmall .col-md-3.col-sm-6 .cardS .text h3, .section #cardAreaSmall .col-md-3.col-sm-6 .cardS .text a {
+  padding: 0 0 0 20px;
+}
+.section #cardAreaSmall .col-md-3.col-sm-6 .cardS:hover {
+  box-shadow: 0 5px 10px #b9b8b8bd, 0 5px 10px #b9b8b8bd;
+}
+.section #cardAreaSmall .col-md-3.col-sm-6 .cardS:active {
+  box-shadow: 0 5px 10px #b9b8b8bd, 0 5px 10px #b9b8b8bd;
+}
+.section #cardAreaBig {
+  margin-top: 123px;
+}
+.section #cardAreaBig .col-md-12 {
+  display: flex;
+  align-items: center;
+  padding: 0 0 10px 0;
+}
+.section #cardAreaBig .col-md-12 h1 {
+  position: absolute;
+}
+.section #cardAreaBig .col-md-12 p {
+  font-family: "Londrina Shadow", cursive;
+  color: #d3c0ef;
+  margin-left: 45px;
+  font-size: 150px;
+}
+.section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 {
+  display: flex;
+  justify-content: center;
+}
+.section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card {
+  display: flex;
+  background-color: #fbfbfb;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 255px;
+  height: 335px;
+  margin: 55px 0 0 0;
+}
+.section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .cardBig {
+  width: 100%;
+  height: 265px;
+  align-items: center;
+  perspective: 1000px;
+  margin: 0 0 0 0;
+}
+.section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .front .img img {
+  height: 180px;
+  width: 180px;
+}
+.section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .front .img h3 {
+  font-family: "Ralyway", sans-serif;
+  text-align: center;
+}
+.section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .front, .section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: 1s;
+  backface-visibility: hidden;
+  border-radius: 30px 30px 0 0;
+  background-color: #fdfdfd;
+  box-shadow: 0 -10px 5px -5px #dbdbdb1e, -12px 0 5px -4px #dbdbdb1e, 12px 0 5px -4px #dbdbdb2a;
+}
+.section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .back h3 {
+  font-family: "Ralyway", sans-serif;
+  font-weight: 400;
+  color: #8205a8a9;
+  margin: 35px 0 0 0;
+}
+.section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .back p {
+  font-family: "Ralyway", sans-serif;
+  font-weight: 300;
+  color: #202020;
+  margin: 35px 0 0 0;
+}
+.section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .cardBig:hover .front {
+  transform: rotateY(190deg);
+}
+.section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .cardBig:hover .back {
+  transform: rotateY(360deg);
+}
+.section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .areabuton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  border-radius: 0 0 30px 30px;
+  margin: 0;
+  background-color: #fdfdfd;
+  box-shadow: 0 15px 5px -5px #dbdbdb2a, -12px 0 5px -4px #dbdbdb2a, 12px 0 5px -4px #dbdbdb2a;
+}
+.section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .areabuton .text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .areabuton .text h4 {
+  margin: 0 0 0 10px;
+}
+.section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .areabuton .text button {
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  background-color: #9345ee;
+  transition: 0.3s;
+  border: none;
+  border-radius: 100px;
+  padding: 0;
+  margin: 0 10px 0 0;
+  color: #efefef;
+  font-size: 40px;
+  font-family: "Oswald", sans-serif;
+}
+.section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .areabuton .text button:hover {
+  background-color: #FF0079;
+}
+.section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .areabuton .text button:active {
+  background-color: #FF0079;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  margin: 50px 0 0 0;
+  height: 50px;
+  background-color: #e4e4e4;
+}
+footer .col-md-12 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .col-md-12 .txt {
+  align-items: center;
+  text-align: center;
+}
+footer .col-md-12 .txt p {
+  margin: 0;
+  color: #202020;
+  font-size: 15px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+}
+footer .col-md-12 .link img {
+  width: 30px;
+}
+
+@media screen and (max-width: 999px) {
+  .navbar {
+    justify-content: space-between !important;
+    padding-top: 0 !important;
+  }
+  .navbar .col-md-6 {
+    display: none !important;
+  }
+  .navbar #logo {
+    display: flex;
+    align-items: center;
+    order: 2;
+    justify-content: center;
+  }
+  .navbar #login_bacet {
+    display: flex !important;
+    justify-content: start !important;
+    order: 1;
+  }
+  .navbar #login_bacet img {
+    height: 20px;
+    width: 20px;
+  }
+  .navbar #burger_menu_col {
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    order: 3;
+  }
+  .navbar #burger_menu_col .burger_menu {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    cursor: pointer !important;
+  }
+  .navbar #burger_menu_col .burger_menu span {
+    width: 100%;
+    height: 3.5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease 0s;
+    background-color: #9345ee;
+    border-radius: 2px;
+  }
+  .navbar #burger_menu_col .burger_menu span:nth-of-type(2) {
+    top: calc(50% - 8px);
+  }
+  .navbar #burger_menu_col .burger_menu span:nth-of-type(3) {
+    top: calc(50% + 8px);
+  }
+  .navbar #burger_menu_col .burger_menu.active span:first-of-type {
+    transform: translateX(100%);
+  }
+  .navbar #burger_menu_col .burger_menu.active span:nth-of-type(2) {
+    top: 50%;
+    background-color: #7148FF;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .navbar #burger_menu_col .burger_menu.active span:nth-of-type(3) {
+    top: 50%;
+    background-color: #7148FF;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  .col-md-12.burger_body.active {
+    display: flex !important;
+    justify-content: center;
+    text-align: center;
+  }
+  .col-md-12.burger_body.active .menu {
+    margin: 50px 0 50px 0;
+    display: flex;
+    align-items: center;
+  }
+  .col-md-12.burger_body.active .menu li {
+    margin: 0 25px 0 25px;
+  }
+  .col-md-12.burger_body.active .menu li a {
+    transition: 0.3s;
+    font-size: 15px;
+    font-family: "Ralyway", sans-serif;
+    color: #202020;
+  }
+  .col-md-12.burger_body.active .menu li a:hover {
+    color: #9345ee;
+  }
+  .col-md-12.burger_body.active .menu li a:active {
+    color: #9345ee;
+  }
+
+  #cardAreaSmall .col-md-3.col-sm-6 .text {
+    margin-left: 0px !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .col-md-12.burger_body.active .menu {
+    margin: 25px 0 25px 0;
+    flex-direction: column !important;
+  }
+
+  #cardAreaSmall .col-md-3.col-sm-6 .text {
+    margin-left: 30px !important;
+  }
+}
+@media screen and (max-width: 580px) {
+  #cardAreaBig .col-md-12 {
+    justify-content: center !important;
+  }
+  #cardAreaBig .col-md-12 p {
+    opacity: 40% !important;
+    margin: 0 !important;
+  }
+
+  #cardAreaSmall .col-md-12 {
+    justify-content: center !important;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

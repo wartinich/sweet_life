@@ -1,0 +1,7 @@
+*.scss linguist-language=Python
+*.css linguist-language=Python
+static/* linguist-vendored
+
+style.scss linguist-vendored=false
+style.css linguist-vendored=false
+
