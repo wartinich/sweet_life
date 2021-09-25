@@ -1,0 +1,97 @@
+{% load static %}
+<header>
+    <div class="container">
+        <div class="row">
+            <nav class="navbar">
+                <!-- logo -->
+                <div id="logo" class="col-3">
+                    <div class="">
+                        <a href="{% url 'home' %}">
+                            <img class="logo" src="{% static 'img/logo.png' %}" alt="logo">
+                        </a>
+                    </div>
+                </div>
+                <!-- Main menu -->
+                <div class="col-md-6">
+                    <ul class="menu">
+                        <li>
+                            <a href="">
+                                Торти
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                Чизкейки
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                Маршмелоу
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                Капкейки
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                Про нас
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- busket button  -->
+                <div id="login_bacet" class="col-3">
+                    <a href="">
+                        <button class="bacet">
+                            <img src="{% static 'img/shopping_basket.png' %}" alt="">
+                            <div class="line"></div>
+                            <p class="count">2</p>
+                        </button>
+                    </a>
+                </div>
+                <!-- burger button  -->
+                <div id="burger_menu_col" class="col-3">
+                    <div class="burger_menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+            </nav>
+
+            <div class="col-md-12 burger_body">
+                <!-- burger menu  -->
+                <ul class="menu">
+                    <li>
+                        <a href="">
+                            Торти
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Чизкейки
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Маршмелоу
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Капкейки
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Про нас
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
