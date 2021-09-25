@@ -1,6 +1,6 @@
-{% extends 'base.html' %}
+{% extends 'main/base.html' %}
 
-{% block content %}
+{% block section %}
     <section class="section">
         <!-- carousel start -->
         <div id="carusel_container" class="container">
@@ -99,7 +99,9 @@
                                             {{ item.price }}₴
                                         </h4>
 
-                                        <form action="">
+                                        <form action="{% url 'cart:cart_add' item.id %}" method="post">
+                                            <div style="visibility: hidden;" >{{ cart_product_form }}</div>
+                                            {% csrf_token %}
                                             <button>+</button>
                                         </form>
 
