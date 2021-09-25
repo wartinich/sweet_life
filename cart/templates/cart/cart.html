@@ -13,116 +13,36 @@
             </div>
             {% for item in cart %}
                 {% with product=item.product %}
-                <!-- product in the basket start -->
-                <div id="product_in_bascet_row" class="row">
-                    <div id="img_and_name" class="col">
-                        <img src="{{ product.image.url }}" alt="">
-                        <p>{{ product.title }}</p>
-                    </div>
-
-                    <div id="count_price_delete" class="col">
-                        <div class="count">
-                            <button>-</button>
-                            <p>5</p>
-                            <button>+</button>
+                    <!-- product in the basket start -->
+                    <div id="product_in_bascet_row" class="row">
+                        <div id="img_and_name" class="col">
+                            <img src="{{ product.image.url }}" alt="">
+                            <p>{{ product.title }}</p>
                         </div>
 
-                        <div class="price_delete">
-                            <p>{{ item.price }}</p>
-                            <button class="buttoneDelete">&times;</button>
+                        <div id="count_price_delete" class="col">
+                            <div class="count">
+                                <form action="{% url 'cart:cart_add' product.id %}" method="post">
+                                    {{ item.update_quantity_form.quantity }}
+                                    {{ item.update_quantity_form.update }}
+                                    <input type="submit" class="btn btn-primary" value="Update">
+                                    {% csrf_token %}
+                                </form>
+                            </div>
+
+                            <div class="price_delete">
+                                <p>{{ item.total_price }}</p>
+                                <a href="{% url 'cart:cart_remove' product.id %}" class="buttoneDelete">&times;</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- product in the basket end -->
+                    <!-- product in the basket end -->
                 {% endwith %}
             {% endfor %}
 
         </div>
 
+    {% include 'orders/include/created.html' %}
 
-        <div id="sending_form" class="container">
-
-            <div id="item_text_row" class="row">
-                <div id="text_name" class="col-md-12">
-                    <h1>
-                        Оформлення замовлення
-                    </h1>
-                </div>
-            </div>
-            <!-- sending form start-->
-            <form action="">
-                <div id="sending_form_row" class="row">
-
-                    <div class="col-md-4">
-                        <div>
-                            <input placeholder="Імя">
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div>
-                            <input placeholder="Прізвисько">
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div>
-                            <input placeholder="Email">
-                        </div>
-                    </div>
-
-                </div>
-                <!-- field number -->
-                <div id="sending_form_row" class="row">
-                    <div class="col-md-4">
-                        <div>
-                            <input placeholder="Телефон">
-                        </div>
-                    </div>
-                    <!-- field cite -->
-                    <div class="col-md-4">
-                        <div>
-                            <input placeholder="Місто">
-                        </div>
-                    </div>
-                    <!-- field adress -->
-                    <div class="col-md-4">
-                        <div>
-                            <input placeholder="Адреса замовлення">
-                        </div>
-                    </div>
-                </div>
-                <!-- field comment -->
-                <div id="sending_form_row" class="row">
-                    <div class="col-md-12 coment">
-                        <div class="coment">
-                            <textarea placeholder="Коментар до замовлення" name="" id="" cols="30" rows="10"></textarea>
-                        </div>
-                    </div>
-                </div>
-                <!-- sending form end-->
-            </form>
-        </div>
-
-        <div id="total_price" class="container">
-            <div class="row">
-                <div class="col p">
-
-                    <h4>
-                        Сума замовлення:
-                    </h4>
-                    <h3>
-                        500$
-                    </h3>
-
-                </div>
-
-                <div class="col b">
-                    <button>
-                        Замовити
-                    </button>
-                </div>
-            </div>
-        </div>
     </section>
 {% endblock %}

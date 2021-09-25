@@ -43,11 +43,17 @@
                 </div>
                 <!-- busket button  -->
                 <div id="login_bacet" class="col-3">
-                    <a href="">
+                    <a href="{% url 'cart:cart_detail' %}">
                         <button class="bacet">
-                            <img src="{% static 'img/shopping_basket.png' %}" alt="">
-                            <div class="line"></div>
-                            <p class="count">2</p>
+                            {% with total_items=cart|length %}
+                                {% if cart|length > 0 %}
+                                    <img src="{% static 'img/shopping_basket.png' %}" alt="">
+                                    <div class="line"></div>
+                                    <p class="count">{{ total_items }}</p>
+                                {% else %}
+                                    <img src="{% static 'img/shopping_basket.png' %}" alt="">
+                                {% endif %}
+                            {% endwith %}
                         </button>
                     </a>
                 </div>
