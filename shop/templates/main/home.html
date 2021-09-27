@@ -100,7 +100,7 @@
                                         </h4>
 
                                         <form action="{% url 'cart:cart_add' item.id %}" method="post">
-                                            <div style="visibility: hidden;" >{{ cart_product_form }}</div>
+                                            {{ cart_product_form }}
                                             {% csrf_token %}
                                             <button>+</button>
                                         </form>

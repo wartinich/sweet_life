@@ -24,4 +24,6 @@ def order_create(request):
 
     else:
         form = OrderCreateForm()
-    return render(request, 'orders/include/created.html', {'form': form, 'cart': cart})
+
+    context = {'form': form, 'cart': cart}
+    return render(request, 'orders/include/created.html', context)
