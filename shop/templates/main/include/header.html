@@ -46,7 +46,7 @@
                     <a href="{% url 'cart:cart_detail' %}">
                         <button class="bacet">
                             {% with total_items=cart|length %}
-                                {% if cart|length > 0 %}
+                                {% if cart|length >= 0 %}
                                     <img src="{% static 'img/shopping_basket.png' %}" alt="">
                                     <div class="line"></div>
                                     <p class="count">{{ total_items }}</p>

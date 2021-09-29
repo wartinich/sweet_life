@@ -2,8 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap");
 body {
+  padding: 0;
   margin: 0;
   background-color: #fbfbfb;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 
 a {
@@ -155,20 +159,29 @@ section .container #product_in_bascet_row #count_price_delete {
   justify-content: space-between;
 }
 section .container #product_in_bascet_row #count_price_delete .count {
+  border: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-section .container #product_in_bascet_row #count_price_delete .count P {
+section .container #product_in_bascet_row #count_price_delete .count .quantity {
+  height: 40px;
+  width: 40px;
+  border: none;
+  background-color: #fbfbfb;
+  text-align: center;
   font-family: "Ralyway", sans-serif;
   font-size: 25px;
   font-weight: 300;
   color: #202020;
   margin: 0 10px 0 10px;
 }
+section .container #product_in_bascet_row #count_price_delete .count input::-webkit-outer-spin-button, section .container #product_in_bascet_row #count_price_delete .count input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+}
 section .container #product_in_bascet_row #count_price_delete .count button {
-  top: 50%;
-  left: 50%;
   display: flex;
   align-items: center;
   text-align: center;
@@ -179,11 +192,14 @@ section .container #product_in_bascet_row #count_price_delete .count button {
   transition: 0.3s;
   border: none;
   border-radius: 50%;
-  padding: 0;
-  margin: 0;
+}
+section .container #product_in_bascet_row #count_price_delete .count button p {
   color: #efefef;
-  font-size: 30px;
-  font-family: "Oswald", sans-serif;
+  font-size: 25px;
+  margin: 0 0 5px;
+}
+section .container #product_in_bascet_row #count_price_delete .count button:hover {
+  background-color: #7148FF;
 }
 section .container #product_in_bascet_row #count_price_delete .count button:active {
   background-color: #7148FF;
@@ -208,6 +224,14 @@ section .container #product_in_bascet_row #count_price_delete .price_delete butt
   font-size: 35px;
   font-family: "Oswald", sans-serif;
 }
+section .container #product_in_bascet_row #count_price_delete .price_delete button p {
+  color: #efefef;
+  font-size: 25px;
+  margin: 0;
+}
+section .container #product_in_bascet_row #count_price_delete .price_delete button:hover {
+  background-color: #FF0079;
+}
 section .container #product_in_bascet_row #count_price_delete .price_delete button:active {
   background-color: #FF0079;
 }
@@ -217,54 +241,6 @@ section .container #product_in_bascet_row #count_price_delete .price_delete P {
   font-weight: 300;
   color: #202020;
   margin: 0 10px 0 0;
-}
-section #sending_form {
-  margin-top: 80px;
-  border-radius: 30px;
-  box-shadow: 0 12px 10px #dbdbdb91, 0 12px 10px #dbdbdb91;
-}
-section #sending_form #text_name {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-section #sending_form #text_name h1 {
-  white-space: wrap;
-  margin: 20px 0 20px 0;
-}
-section #sending_form #sending_form_row h4 {
-  font-size: 20px;
-  margin: 0 0 10px;
-}
-section #sending_form #sending_form_row .col-md-4 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-section #sending_form #sending_form_row .col-md-4 div {
-  margin: 20px 0 20px;
-  width: 200px;
-}
-section #sending_form #sending_form_row .col-md-4 div input {
-  width: 100%;
-  height: 40px;
-  border: 1px solid rgba(82, 82, 82, 0.411);
-  border-radius: 10px;
-}
-section #sending_form #sending_form_row .col-md-12.coment {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 0 20px 0;
-}
-section #sending_form #sending_form_row .col-md-12.coment .coment {
-  width: 90%;
-}
-section #sending_form #sending_form_row .col-md-12.coment .coment textarea {
-  width: 100%;
-  height: 150px;
-  border: 1px solid rgba(82, 82, 82, 0.411);
-  border-radius: 10px;
 }
 section #total_price {
   margin-top: 50px;
@@ -292,6 +268,7 @@ section #total_price .col.b {
 }
 section #total_price .col.b button {
   display: flex;
+  text-align: center;
   align-items: center;
   justify-content: center;
   background-color: #9345ee;
@@ -318,7 +295,7 @@ section #total_price .col.b button:active {
 footer {
   display: flex;
   align-items: center;
-  margin: 50px 0 0 0;
+  margin: 30% 0 0 0;
   height: 50px;
   background-color: #e4e4e4;
 }
@@ -446,18 +423,6 @@ footer .col-md-12 .link img {
   .col-md-12.burger_body.active .menu {
     margin: 25px 0 25px 0;
     flex-direction: column !important;
-  }
-
-  #sending_form_row .col-md-4 div {
-    width: 320px !important;
-  }
-  #sending_form_row .col-md-4 div input {
-    height: 65px !important;
-  }
-}
-@media screen and (max-width: 580px) {
-  #sending_form {
-    box-shadow: none !important;
   }
 }
 @media screen and (max-width: 460px) {
