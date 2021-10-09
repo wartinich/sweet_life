@@ -23,11 +23,13 @@
     <link rel="shortcut icon" href="{% static 'img/logo.png' %}" type="image/png">
 </head>
 <body>
-{% include 'main/include/header.html' %}
+<div class="wrapper">
+    {% include 'main/include/header.html' %}
 
-{% block section %}{% endblock %}
+    {% block section %}{% endblock %}
 
-{% include 'main/include/footer.html' %}
+    {% include 'main/include/footer.html' %}
+</div>
 
 <script src="{% static 'js/script.js' %}"></script>
 

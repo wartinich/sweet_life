@@ -23,25 +23,62 @@
                         <div id="count_price_delete" class="col">
                             <form action="{% url 'cart:cart_add' product.id %}" method="post">
                                 <div class="count">
-                                    <button id="countB" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"><p>‹</p></button>
+                                    <button id="countB"
+                                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                                            class="minus"><p>‹</p></button>
                                     {{ item.update_quantity_form.quantity }}
                                     {{ item.update_quantity_form.update }}
-                                    <button id="countB" onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"><p>›</p></button>
+                                    <button id="countB"
+                                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                            class="plus"><p>›</p></button>
                                     {% csrf_token %}
                                 </div>
                             </form>
 
                             <div class="price_delete">
                                 <p>{{ item.total_price }}</p>
-                                <a href="{% url 'cart:cart_remove' product.id %}"><button class="buttoneDelete">&times;</button></a>
+                                <a href="{% url 'cart:cart_remove' product.id %}">
+                                    <button class="buttoneDelete">&times;</button>
+                                </a>
                             </div>
                         </div>
                     </div>
+
+
+
                     <!-- product in the basket end -->
                 {% endwith %}
             {% endfor %}
-
-
         </div>
+        <div id="total_price" class="container">
+            <div class="row">
+
+                <div id="price" class="col-md-12 p">
+                    <h4>
+                        Сума замовлення:
+                    </h4>
+                    <h3>
+                        {{ cart.get_total_price }}$
+                    </h3>
+                </div>
+
+                <div id="b1" class="col col-md">
+                    <a href="{% url "shop:home" %}>
+                        <button>
+                            Проовжити
+                        </button>
+                    </a>
+                </div>
+
+                <div id="b2" class="col col-md">
+                    <a href="{% url "orders:create" %}">
+                        <button>
+                            Оформити
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
     </section>
 {% endblock %}

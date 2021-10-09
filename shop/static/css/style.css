@@ -2,11 +2,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap");
 body {
+  padding: null;
   margin: 0;
   background-color: #fbfbfb;
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 a {
@@ -16,7 +32,7 @@ a {
 h1 {
   text-decoration: none;
   font-size: 35px;
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 400;
   color: #3f3f3f;
 }
@@ -31,57 +47,101 @@ input, textarea {
   outline: none;
 }
 
+.cart_product input[type=number] {
+  visibility: hidden;
+  position: absolute;
+}
+
 header {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 999;
   background-color: #fbfbfb;
   margin: 0px 0px 0px 0px;
-  box-shadow: 0px 4px 14px -5px rgba(34, 60, 80, 0.34);
+  -webkit-box-shadow: 0px 4px 14px -5px rgba(34, 60, 80, 0.34);
+          box-shadow: 0px 4px 14px -5px rgba(34, 60, 80, 0.34);
   border-radius: 0 0 20px 20px;
 }
+
 header .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-top: 20px;
 }
+
 header .navbar .logo {
   height: 100px;
 }
+
 header .navbar .col-md-6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 header .navbar .col-md-6 .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 header .navbar .col-md-6 .menu li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 15px 0 15px;
 }
+
 header .navbar .col-md-6 .menu li a {
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   font-size: 15px;
-  font-family: "Ralyway", sans-serif;
+  font-family: 'Ralyway', sans-serif;
   color: #202020;
 }
+
 header .navbar .col-md-6 .menu li a:hover {
   color: #9345ee;
 }
+
 header .navbar .col-md-6 .menu li a:active {
   color: #9345ee;
 }
+
 header .navbar #login_bacet {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
+
 header .navbar #login_bacet .bacet {
+  -webkit-transition: 0.3s;
   transition: 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0;
   height: 35px;
   width: 60px;
@@ -91,231 +151,378 @@ header .navbar #login_bacet .bacet {
   cursor: pointer;
   text-align: center;
   font-size: 15.5px;
-  font-family: "Ralyway", sans-serif;
+  font-family: 'Ralyway', sans-serif;
   color: #f3f3f3;
 }
+
 header .navbar #login_bacet .bacet img {
   height: 20px;
   width: 20px;
 }
+
 header .navbar #login_bacet .bacet .line {
   border-left: 1.5px solid #f3f3f3;
   height: 20px;
 }
+
 header .navbar #login_bacet .bacet p {
   margin-bottom: 0;
   padding-right: 3.5px;
 }
+
 header .navbar #login_bacet .bacet:hover {
   background-color: #7148FF;
 }
+
 header .navbar #login_bacet .bacet:active {
   background-color: #7148FF;
 }
+
 header .navbar #burger_menu_col {
   display: none;
 }
+
 header .col-md-12.burger_body {
   display: none;
 }
 
 .section {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   margin: 30px 0px 0px 0px;
 }
+
 .section #carusel_container {
   border-radius: 15px;
 }
+
 .section #carusel_container #carouselExampleInterval {
   background-color: none;
 }
+
 .section #carusel_container #carouselExampleInterval .carousel-inner {
   border-radius: 15px;
   width: 100%;
   height: 100%;
 }
+
 .section #cardAreaSmall {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: left;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
 }
+
 @media screen and (max-width: 580px) {
   .section #cardAreaSmall {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
+
 .section #cardAreaSmall .col-md-12 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: left;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   padding: 0;
 }
+
 .section #cardAreaSmall .col-md-12 h1 {
   padding: 30px 0 30px 0;
 }
+
 .section #cardAreaSmall .col-md-3.col-sm-6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .section #cardAreaSmall .col-md-3.col-sm-6 .cardS {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 55px 0 0 0;
   height: 120px;
   width: 255px;
   cursor: pointer;
   background: #FFFFFF;
-  box-shadow: 0 12px 10px #dbdbdb6b, 0 10px 10px #dbdbdb6b;
+  -webkit-box-shadow: 0 12px 10px #dbdbdb6b, 0 10px 10px #dbdbdb6b;
+          box-shadow: 0 12px 10px #dbdbdb6b, 0 10px 10px #dbdbdb6b;
   border-radius: 10px;
 }
+
 .section #cardAreaSmall .col-md-3.col-sm-6 .cardS img {
   width: 80px;
 }
+
 .section #cardAreaSmall .col-md-3.col-sm-6 .cardS h3 {
   font-size: 13px;
-  font-family: "Ralyway", sans-serif;
+  font-family: 'Ralyway', sans-serif;
   font-weight: 400;
   color: #202020;
 }
+
 .section #cardAreaSmall .col-md-3.col-sm-6 .cardS a {
   font-size: 12px;
-  font-family: "Ralyway", sans-serif;
+  font-family: 'Ralyway', sans-serif;
   color: #686868;
 }
+
 .section #cardAreaSmall .col-md-3.col-sm-6 .cardS .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-left: 30px;
 }
+
 .section #cardAreaSmall .col-md-3.col-sm-6 .cardS .text h3, .section #cardAreaSmall .col-md-3.col-sm-6 .cardS .text a {
   padding: 0 0 0 20px;
 }
+
 .section #cardAreaSmall .col-md-3.col-sm-6 .cardS:hover {
-  box-shadow: 0 5px 10px #b9b8b8bd, 0 5px 10px #b9b8b8bd;
+  -webkit-box-shadow: 0 5px 10px #b9b8b8bd, 0 5px 10px #b9b8b8bd;
+          box-shadow: 0 5px 10px #b9b8b8bd, 0 5px 10px #b9b8b8bd;
 }
+
 .section #cardAreaSmall .col-md-3.col-sm-6 .cardS:active {
-  box-shadow: 0 5px 10px #b9b8b8bd, 0 5px 10px #b9b8b8bd;
+  -webkit-box-shadow: 0 5px 10px #b9b8b8bd, 0 5px 10px #b9b8b8bd;
+          box-shadow: 0 5px 10px #b9b8b8bd, 0 5px 10px #b9b8b8bd;
 }
+
 .section #cardAreaBig {
   margin-top: 123px;
 }
+
 .section #cardAreaBig .col-md-12 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0 0 10px 0;
 }
+
 .section #cardAreaBig .col-md-12 h1 {
   position: absolute;
 }
+
 .section #cardAreaBig .col-md-12 p {
-  font-family: "Londrina Shadow", cursive;
+  font-family: 'Londrina Shadow', cursive;
   color: #d3c0ef;
   margin-left: 45px;
   font-size: 150px;
 }
+
 .section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: #fbfbfb;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: none;
   width: 255px;
   height: 335px;
   margin: 55px 0 0 0;
 }
+
 .section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .cardBig {
   width: 100%;
   height: 265px;
-  align-items: center;
-  perspective: 1000px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
   margin: 0 0 0 0;
 }
+
 .section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .front {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .front .img img {
   height: 180px;
   width: 180px;
 }
+
 .section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .front .img h3 {
-  font-family: "Ralyway", sans-serif;
+  font-family: 'Ralyway', sans-serif;
   text-align: center;
 }
+
 .section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .front, .section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .back {
   position: absolute;
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
+  -webkit-transition: 1s;
   transition: 1s;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   border-radius: 30px 30px 0 0;
   background-color: #fdfdfd;
-  box-shadow: 0 -10px 5px -5px #dbdbdb1e, -12px 0 5px -4px #dbdbdb1e, 12px 0 5px -4px #dbdbdb2a;
+  -webkit-box-shadow: 0 -10px 5px -5px #dbdbdb1e, -12px 0 5px -4px #dbdbdb1e, 12px 0 5px -4px #dbdbdb2a;
+          box-shadow: 0 -10px 5px -5px #dbdbdb1e, -12px 0 5px -4px #dbdbdb1e, 12px 0 5px -4px #dbdbdb2a;
 }
+
 .section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .back {
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
 }
+
 .section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .back h3 {
-  font-family: "Ralyway", sans-serif;
+  font-family: 'Ralyway', sans-serif;
   font-weight: 400;
   color: #8205a8a9;
   margin: 35px 0 0 0;
 }
+
 .section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .back p {
-  font-family: "Ralyway", sans-serif;
+  font-family: 'Ralyway', sans-serif;
   font-weight: 300;
   color: #202020;
   margin: 35px 0 0 0;
 }
+
 .section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .cardBig:hover .front {
-  transform: rotateY(190deg);
+  -webkit-transform: rotateY(190deg);
+          transform: rotateY(190deg);
 }
+
 .section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .cardBig:hover .back {
-  transform: rotateY(360deg);
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
 }
+
 .section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .areabuton {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 65px;
   border-radius: 0 0 30px 30px;
   margin: 0;
+  position: relative;
   background-color: #fdfdfd;
-  box-shadow: 0 15px 5px -5px #dbdbdb2a, -12px 0 5px -4px #dbdbdb2a, 12px 0 5px -4px #dbdbdb2a;
+  -webkit-box-shadow: 0 15px 5px -5px #dbdbdb2a, -12px 0 5px -4px #dbdbdb2a, 12px 0 5px -4px #dbdbdb2a;
+          box-shadow: 0 15px 5px -5px #dbdbdb2a, -12px 0 5px -4px #dbdbdb2a, 12px 0 5px -4px #dbdbdb2a;
 }
+
 .section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .areabuton .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
 }
+
+.section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .areabuton .text form input {
+  position: absolute;
+  visibility: hidden;
+}
+
 .section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .areabuton .text h4 {
   margin: 0 0 0 10px;
 }
+
 .section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .areabuton .text button {
   top: 50%;
   left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 50px;
   width: 50px;
   background-color: #9345ee;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   border: none;
   border-radius: 100px;
@@ -323,70 +530,112 @@ header .col-md-12.burger_body {
   margin: 0 10px 0 0;
   color: #efefef;
   font-size: 40px;
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
+
 .section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .areabuton .text button:hover {
   background-color: #FF0079;
 }
+
 .section #cardAreaBig .col-xl-3.col-md-4.col-sm-6 .card .areabuton .text button:active {
   background-color: #FF0079;
 }
 
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 50px 0 0 0;
   height: 50px;
   background-color: #e4e4e4;
 }
+
 footer .col-md-12 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 footer .col-md-12 .txt {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
+
 footer .col-md-12 .txt p {
   margin: 0;
   color: #202020;
   font-size: 15px;
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 400;
 }
+
 footer .col-md-12 .link img {
   width: 30px;
 }
 
 @media screen and (max-width: 999px) {
   .navbar {
-    justify-content: space-between !important;
+    -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
     padding-top: 0 !important;
   }
   .navbar .col-md-6 {
     display: none !important;
   }
   .navbar #logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    order: 2;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .navbar #login_bacet {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
-    justify-content: start !important;
-    order: 1;
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: start !important;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
   .navbar #login_bacet img {
     height: 20px;
     width: 20px;
   }
   .navbar #burger_menu_col {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
-    justify-content: flex-end !important;
-    align-items: center !important;
-    order: 3;
+    -webkit-box-pack: end !important;
+        -ms-flex-pack: end !important;
+            justify-content: flex-end !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
   }
   .navbar #burger_menu_col .burger_menu {
     width: 30px;
@@ -402,7 +651,9 @@ footer .col-md-12 .link img {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     background-color: #9345ee;
     border-radius: 2px;
@@ -414,36 +665,47 @@ footer .col-md-12 .link img {
     top: calc(50% + 8px);
   }
   .navbar #burger_menu_col .burger_menu.active span:first-of-type {
-    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
   }
   .navbar #burger_menu_col .burger_menu.active span:nth-of-type(2) {
     top: 50%;
     background-color: #7148FF;
-    transform: translate(-50%, -50%) rotate(45deg);
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+            transform: translate(-50%, -50%) rotate(45deg);
   }
   .navbar #burger_menu_col .burger_menu.active span:nth-of-type(3) {
     top: 50%;
     background-color: #7148FF;
-    transform: translate(-50%, -50%) rotate(-45deg);
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+            transform: translate(-50%, -50%) rotate(-45deg);
   }
-
   .col-md-12.burger_body.active {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-align: center;
   }
   .col-md-12.burger_body.active .menu {
     margin: 50px 0 50px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .col-md-12.burger_body.active .menu li {
     margin: 0 25px 0 25px;
   }
   .col-md-12.burger_body.active .menu li a {
+    -webkit-transition: 0.3s;
     transition: 0.3s;
     font-size: 15px;
-    font-family: "Ralyway", sans-serif;
+    font-family: 'Ralyway', sans-serif;
     color: #202020;
   }
   .col-md-12.burger_body.active .menu li a:hover {
@@ -452,33 +714,38 @@ footer .col-md-12 .link img {
   .col-md-12.burger_body.active .menu li a:active {
     color: #9345ee;
   }
-
   #cardAreaSmall .col-md-3.col-sm-6 .text {
     margin-left: 0px !important;
   }
 }
+
 @media screen and (max-width: 767px) {
   .col-md-12.burger_body.active .menu {
     margin: 25px 0 25px 0;
-    flex-direction: column !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
   }
-
   #cardAreaSmall .col-md-3.col-sm-6 .text {
     margin-left: 30px !important;
   }
 }
+
 @media screen and (max-width: 580px) {
   #cardAreaBig .col-md-12 {
-    justify-content: center !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
   }
   #cardAreaBig .col-md-12 p {
     opacity: 40% !important;
     margin: 0 !important;
   }
-
   #cardAreaSmall .col-md-12 {
-    justify-content: center !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
   }
 }
-
 /*# sourceMappingURL=style.css.map */
