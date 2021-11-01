@@ -158,7 +158,9 @@
                                             {{ item.price }}₴
                                         </h4>
 
-                                        <form action="">
+                                        <form class="cart_product" action="{% url 'cart:cart_add' item.id %}"  method="post">
+                                            {{ cart_product_form }}
+                                            {% csrf_token %}
                                             <button>+</button>
                                         </form>
 
@@ -216,7 +218,9 @@
                                             {{ item.price }}₴
                                         </h4>
 
-                                        <form action="">
+                                        <form class="cart_product" action="{% url 'cart:cart_add' item.id %}"  method="post">
+                                            {{ cart_product_form }}
+                                            {% csrf_token %}
                                             <button>+</button>
                                         </form>
 
@@ -272,7 +276,9 @@
                                             {{ item.price }}₴
                                         </h4>
 
-                                        <form action="">
+                                        <form class="cart_product" action="{% url 'cart:cart_add' item.id %}"  method="post">
+                                            {{ cart_product_form }}
+                                            {% csrf_token %}
                                             <button>+</button>
                                         </form>
 

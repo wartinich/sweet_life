@@ -1,5 +1,5 @@
 from django import forms
-from django.forms import TextInput
+from django.forms import TextInput, Textarea
 
 from .models import Order
 
@@ -7,7 +7,7 @@ from .models import Order
 class OrderCreateForm(forms.ModelForm):
     class Meta:
         model = Order
-        fields = ['first_name', 'last_name', 'email', 'phone', 'address', 'city']
+        fields = ['first_name', 'last_name', 'email', 'phone', 'address', 'city', 'comment']
 
         widgets = {
             'first_name': TextInput(attrs={
@@ -28,4 +28,7 @@ class OrderCreateForm(forms.ModelForm):
             'city': TextInput(attrs={
                 'placeholder': "Місто"
             }),
+            'comment': Textarea(attrs={
+                'placeholder': "Коментар",
+            })
         }

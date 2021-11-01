@@ -1,0 +1,109 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block section %}
+    <section>
+
+        <div class="container">
+            <div id="item_name_row" class="row">
+                <div id="item_name" class="col-md-12">
+                    <h1>
+                        Оформлення замовлення
+                    </h1>
+                </div>
+            </div>
+
+            <!-- product in the basket start -->
+            {% for item in cart %}
+                {% with product=item.product %}
+                    <div id="product_in_bascet_row" class="row">
+                        <div id="img_and_name" class="col">
+                            <img src="{{ product.image.url }}" alt="">
+                            <p>{{ product.title }}</p>
+                        </div>
+
+                        <div id="count_price_delete" class="col">
+
+                            <div class="count">
+                                {{ item.quantity }}
+                            </div>
+
+
+                            <div class="price_delete">
+                                <p>{{ item.total_price }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endwith %}
+            {% endfor %}
+            <!-- product in the basket end -->
+            
+
+            <!-- space for new cards -->
+        </div>
+
+        <form action="." method="post" name="sending_form">
+            <div id="sending_form" class="container">
+                {% csrf_token %}
+                <!-- sending form start-->
+                <div id="sending_form_row" class="row">
+                    <div class="col-md-4">
+                        <div>
+                            {{ form.first_name }}
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div>
+                            {{ form.last_name }}
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div>
+                            {{ form.email }}
+                        </div>
+                    </div>
+
+                </div>
+                <!-- field number -->
+                <div id="sending_form_row" class="row">
+                    <div class="col-md-4">
+                        <div>
+                            {{ form.phone }}
+                        </div>
+                    </div>
+                    <!-- field cite -->
+                    <div class="col-md-4">
+                        <div>
+                            {{ form.city }}
+                        </div>
+                    </div>
+                    <!-- field adress -->
+                    <div class="col-md-4">
+                        <div>
+                            {{ form.address }}
+                        </div>
+                    </div>
+                    <div id="sending_form_row" class="row">
+                        <div class="col-md-12 coment">
+                            <div class="coment">
+                                {{ form.comment }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="total_price" class="container">
+                <div class="row">
+                    <div class="col b col-md-12">
+                        <button>
+                            Замовити
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+{% endblock %}

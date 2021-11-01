@@ -9,6 +9,7 @@ class Order(models.Model):
     phone = models.CharField(max_length=14, verbose_name='Phone', blank=False)
     address = models.CharField(max_length=240, verbose_name='Address', blank=False)
     city = models.CharField(max_length=240, verbose_name='City')
+    comment = models.TextField(max_length=300, verbose_name='Comment', blank=True, null=True)
     created = models.DateTimeField(auto_now_add=True, verbose_name='Created')
     updated = models.DateTimeField(auto_now=True, verbose_name='Updated')
     paid = models.BooleanField(default=False)

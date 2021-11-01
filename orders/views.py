@@ -20,10 +20,9 @@ def order_create(request):
             cart.clear()
             messages.success(request, 'Your order has been successfully completed.')
             return HttpResponseRedirect('/')
-            # return render(request,'orders/order/created.html', {'order': order})
 
     else:
         form = OrderCreateForm()
 
     context = {'form': form, 'cart': cart}
-    return render(request, 'orders/include/created.html', context)
+    return render(request, 'orders/created.html', context)
