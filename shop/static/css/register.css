@@ -25,6 +25,10 @@ body {
   -webkit-appearance: none;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
 }
@@ -297,6 +301,100 @@ section #product_in_bascet_row .col-xl-3.col-md-4.col-sm-6 .price_count p {
   margin-right: 10px;
 }
 
+section .popup {
+  display: none;
+}
+
+section .popup.active {
+  z-index: 999;
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(31, 31, 31, 0.623);
+}
+
+section .popup.active .popup_body {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .popup.active .popup_body .popup_content {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 60px 30px;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fbfbfb;
+  border-radius: 20px;
+  border: none;
+}
+
+section .popup.active .popup_body .popup_content h1 {
+  color: #9345ee;
+  margin-bottom: 30px;
+}
+
+section .popup.active .popup_body .popup_content p {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Ralyway', sans-serif;
+  color: #202020;
+}
+
+section .popup.active .popup_body .popup_content button {
+  margin-top: 30px;
+  width: 100px;
+  border: 1.5px solid #9345ee;
+  background-color: #fbfbfb;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 50px;
+  color: #9345ee;
+  font-size: 20px;
+  padding: 10px 0;
+  font-family: 'Oswald', sans-serif;
+}
+
+section .popup.active .popup_body .popup_content button:hover {
+  -webkit-box-shadow: 0px 0px 47px 8px rgba(113, 72, 255, 0.3);
+          box-shadow: 0px 0px 47px 8px rgba(113, 72, 255, 0.3);
+  color: #fbfbfb;
+  background-color: #7148FF;
+  border: 1.5px solid #7148FF;
+}
+
+section .popup.active .popup_body .popup_content button:active {
+  -webkit-box-shadow: 0px 0px 47px 8px rgba(113, 72, 255, 0.3);
+          box-shadow: 0px 0px 47px 8px rgba(113, 72, 255, 0.3);
+  background-color: #7148FF;
+}
+
+section .popup.active .popup_body.unactive {
+  display: none;
+}
+
 section #sending_form {
   margin-top: 80px;
   border-radius: 30px;
@@ -347,7 +445,24 @@ section #sending_form #sending_form_row .col-md-4 div input {
   width: 100%;
   height: 40px;
   border: 1px solid rgba(82, 82, 82, 0.411);
+  color: #a1a0a0;
   border-radius: 10px;
+}
+
+section #sending_form #sending_form_row .col-md-4 div input::-webkit-input-placeholder {
+  color: #a1a0a0;
+}
+
+section #sending_form #sending_form_row .col-md-4 div input:-ms-input-placeholder {
+  color: #a1a0a0;
+}
+
+section #sending_form #sending_form_row .col-md-4 div input::-ms-input-placeholder {
+  color: #a1a0a0;
+}
+
+section #sending_form #sending_form_row .col-md-4 div input::placeholder {
+  color: #a1a0a0;
 }
 
 section #sending_form #sending_form_row .col-md-12.coment {

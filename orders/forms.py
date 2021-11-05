@@ -20,7 +20,8 @@ class OrderCreateForm(forms.ModelForm):
                 'placeholder': "Електронна почта"
             }),
             'phone': TextInput(attrs={
-                'placeholder': "Телефон"
+                'placeholder': "Телефон",
+                "value": "+380"
             }),
             'address': TextInput(attrs={
                 'placeholder': "Адреса"

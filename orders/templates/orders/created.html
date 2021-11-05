@@ -8,7 +8,7 @@
             <div id="item_name_row" class="row">
                 <div id="item_name" class="col-md-12">
                     <h1>
-                        Оформлення замовлення
+                        Вміст корзини
                     </h1>
                 </div>
             </div>
@@ -42,8 +42,38 @@
             <!-- space for new cards -->
         </div>
 
+         <div class="popup">
+
+            <div class="popup_body">
+
+                <div class="popup_content">
+                    <h1>
+                        Увага!
+                    </h1>
+
+                    <p>
+                        Зможу взяти ваше замовлення за 2 тижні до потрібної дати.
+                    </p>
+
+                    <button class="button_x">
+                        X
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
         <form action="." method="post" name="sending_form">
             <div id="sending_form" class="container">
+
+                <div id="item_name_row" class="row">
+                <div id="item_name" class="col-md-12">
+                    <h1>
+                        Оформлення замовлення
+                    </h1>
+                </div>
+            </div>
                 {% csrf_token %}
                 <!-- sending form start-->
                 <div id="sending_form_row" class="row">
